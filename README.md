@@ -8,7 +8,10 @@ The purpose of this report is to clarify customer requirements and assess whethe
 ## Current Progress
 - A single robotic arm has been trialled for tray operation, PCB placement, and auxiliary tasks.  
 - Fixed positioning has been implemented due to the absence of computer vision. The robot relies on fixed calibration within its coordinate frame.  
-- Preliminary tray and gripper designs have been created for selected PCB types (Machine 1 & 5).  
+- Preliminary tray and gripper designs have been created for selected PCB types (Machine 1 & 5).
+<img width="320" height="248" alt="image" src="https://github.com/user-attachments/assets/fd798b17-d4a5-47fd-891b-cdd1733e45d4" />
+<img width="450" height="277" alt="image" src="https://github.com/user-attachments/assets/e2743bd1-e576-4c82-873a-49fdc355c364" />
+  
 - Integration testing has identified inconsistencies between machines, requiring individual adaptation (differences between pull-out trays and lever trays).  
 - Evaluation of machine test cycles shows variability in timing (pass/fail durations), impacting synchronisation between the robot and test software.  
 
