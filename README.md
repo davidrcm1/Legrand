@@ -3,6 +3,8 @@
 This progress report provides an update on the Legrand PCB project. Implementation has encountered a number of challenges due to unforeseen complexities from equipment and system limitations.  
 The purpose of this report is to clarify customer requirements and assess whether the project remains feasible within the current budget.
 
+
+
 ---
 
 ## Current Progress
@@ -32,6 +34,11 @@ The purpose of this report is to clarify customer requirements and assess whethe
    - Issues with machine trays for PCBs (easy for humans but error-prone for robots due to protrusions, tray brackets, and electrical components).  
    - Clearance constraints differ per machine.  
    - Tray designs and grippers must be customised accordingly.  
+<img width="262" height="329" alt="image" src="https://github.com/user-attachments/assets/060c466b-0f77-4d9e-a743-6cb07453416c" />
+<img width="388" height="329" alt="image" src="https://github.com/user-attachments/assets/74182512-f5ce-4965-a49d-391b60c87dec" />
+<img width="397" height="338" alt="image" src="https://github.com/user-attachments/assets/42045a67-e457-4d0a-94e6-7ae3dcb5773e" />
+<img width="398" height="500" alt="image" src="https://github.com/user-attachments/assets/e8120d8c-cdb6-4286-b1f9-1b14d450adec" />
+
 
 4. **Lack of Feedback Systems**
    - No built-in mechanism to confirm correct PCB insertion.  
@@ -44,6 +51,8 @@ The purpose of this report is to clarify customer requirements and assess whethe
 
 6. **Sticker Printer Dependency**
    - Sticker placement significantly complicates the gripper design due to size restrictions and removal method.  
+<img width="519" height="280" alt="image" src="https://github.com/user-attachments/assets/d9e5e85d-e8b7-48f0-bbff-ad40ebf8c8e3" />
+
 
 ---
 
@@ -59,11 +68,14 @@ The purpose of this report is to clarify customer requirements and assess whethe
 
 - **Motion Control Strategy**  
   Decide between:
-  - A computer vision setup (higher flexibility, more development time and cost).  
-  - A fixed positioning setup (simpler, but requires static calibrated fixtures and tables).  
+  1. A computer vision setup (higher flexibility, more development time and cost).  
+  2. A fixed positioning setup (simpler, but requires static calibrated fixtures and tables).  
+<img width="525" height="360" alt="image" src="https://github.com/user-attachments/assets/5b542562-06cc-443a-a880-81656d2ecc47" />
+
 
 - **System Expansion**  
-  Evaluate the use of a second robotic arm / automated assembly to manage auxiliary tasks such as stickers and PCB variants.  
+  1. Evaluate the use of a second robotic arm / automated assembly to manage auxiliary tasks such as stickers and PCB variants.
+  2. Replace Sticker for a Pass or Fail tray - Must connect Machine Computer to Tablet for RX/TX Comms
 
 - **Machine Adaptation**  
   1. Incorporate sensors into trays/machines to confirm correct PCB insertion and tray position.  
@@ -71,6 +83,4 @@ The purpose of this report is to clarify customer requirements and assess whethe
 
 ---
 
-## Resource Requirements
-- **Labour**: Increased complexity necessitates additional labour hours and personnel.  
-- **Testing Access**: Overnight machine access is required, as daytime usage is constrained by production/repair schedules.  
+For any of theses actions to take place we do require more accesss to machines so that Setup can be finalised and we can conduct more testing in final setup. This is to identify any further complications that may arise. 
