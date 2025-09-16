@@ -3,15 +3,16 @@ Legrand Progress Report
 This progress report provides an update on the Legrand PCB project. Implementation has encountered a number of challenges due to unforeseen complexities from equipment and system limitations. The purpose of this report is to clarify customer requirements and assess whether the project remains feasible within the current budget.
 
 Current Progress
+
 •	A single robotic arm has been trialled for tray operation, PCB placement, and auxiliary tasks.
 •	Fixed positioning has been implemented due to the absence of computer vision. The robot relies on fixed calibration within its coordinate frame.
 •	Preliminary tray and gripper designs have been created for selected PCB types (Machine 1 & 5).
-   
 •	Integration testing has identified inconsistencies between machines, requiring individual adaptation(Difference between pull out trays and lever trays).
 •	Evaluation of machine test cycles shows variability in timing (pass/fail durations), impacting synchronisation between the robot and test software.
 
 
 Challenges Identified
+
 1.	Machine Variability
 o	Significant differences in PCB size and electrical components on board, open tray clearance (including protrusions), opening mechanisms, placement orientations, and distance between machines.
 o	Each machine requires a tailored tray and handling solution.
