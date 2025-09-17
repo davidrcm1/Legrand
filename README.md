@@ -3,6 +3,7 @@
 This progress report provides an update on the Legrand PCB project. Implementation has encountered a number of challenges due to unforeseen complexities from equipment and system limitations.  
 The purpose of this report is to clarify customer requirements and assess whether the project remains feasible within the current budget.
 
+<img width="978" height="703" alt="image" src="https://github.com/user-attachments/assets/2c1c4162-11f2-48e8-91ba-7c788271772f" />
 
 
 ---
