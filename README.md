@@ -3,9 +3,6 @@
 This progress report provides an update on the Legrand PCB project. Implementation has encountered a number of challenges due to unforeseen complexities from equipment and system limitations.  
 The purpose of this report is to clarify customer requirements and assess whether the project remains feasible within the current budget.
 
-<img width="978" height="703" alt="image" src="https://github.com/user-attachments/assets/2c1c4162-11f2-48e8-91ba-7c788271772f" />
-
-
 ---
 
 ## Current Progress
@@ -13,75 +10,105 @@ The purpose of this report is to clarify customer requirements and assess whethe
 - Fixed positioning has been implemented due to the absence of computer vision. The robot relies on fixed calibration within its coordinate frame.  
 - Preliminary tray and gripper designs have been created for selected PCB types (Machine 1 & 5).
 <img width="320" height="248" alt="image" src="https://github.com/user-attachments/assets/fd798b17-d4a5-47fd-891b-cdd1733e45d4" />
-<img width="450" height="277" alt="image" src="https://github.com/user-attachments/assets/e2743bd1-e576-4c82-873a-49fdc355c364" />
-  
-- Integration testing has identified inconsistencies between machines, requiring individual adaptation (differences between pull-out trays and lever trays).  
+<img width="450" height="277" alt="image" src="https://github.com/user-attachments/assets/e2743bd1-e576-4c82-873a-49fdc355c364" /> 
+- Integration testing has identified inconsistencies between machines, requiring individual adaptation (pull-out trays vs. lever trays).  
 - Evaluation of machine test cycles shows variability in timing (pass/fail durations), impacting synchronisation between the robot and test software.  
 
 ---
 
 ## Challenges Identified
 
-1. **Machine Variability**
-   - Significant differences in PCB size and electrical components on board, open tray clearance (including protrusions), opening mechanisms, placement orientations, and distance between machines.  
+1. **Machine Variability**  
+   - Large differences in PCB size, tray clearance (with protrusions), opening mechanisms, placement orientations, and distance between machines.  
    - Each machine requires a tailored tray and handling solution.  
 
-2. **Positioning Constraints**
+2. **Positioning Constraints**  
    - Without computer vision, robot motion must remain absolute.  
-   - Any shift in robot position invalidates calibration and introduces collision risks.  
+   - Any shift in robot position invalidates calibration and increases collision risk.  
 
-3. **PCB Placement Variations**
-   - Orientation issues (e.g., inverted PCBs, panelised boards).  
-   - Issues with machine trays for PCBs (easy for humans but error-prone for robots due to protrusions, tray brackets, and electrical components).  
+3. **PCB Placement Variations**  
+   - Orientation issues (inverted PCBs, panelised boards).  
+   - Trays designed for human handling introduce errors for robots (brackets, protrusions, electrical components).  
    - Clearance constraints differ per machine.  
-   - Tray designs and grippers must be customised accordingly.  
-<img width="262" height="329" alt="image" src="https://github.com/user-attachments/assets/060c466b-0f77-4d9e-a743-6cb07453416c" />
-<img width="388" height="329" alt="image" src="https://github.com/user-attachments/assets/74182512-f5ce-4965-a49d-391b60c87dec" />
-<img width="397" height="338" alt="image" src="https://github.com/user-attachments/assets/42045a67-e457-4d0a-94e6-7ae3dcb5773e" />
-<img width="398" height="500" alt="image" src="https://github.com/user-attachments/assets/e8120d8c-cdb6-4286-b1f9-1b14d450adec" />
+  <img width="262" height="329" alt="image" src="https://github.com/user-attachments/assets/060c466b-0f77-4d9e-a743-6cb07453416c" />
+  <img width="388" height="329" alt="image" src="https://github.com/user-attachments/assets/74182512-f5ce-4965-a49d-391b60c87dec" />
+  <img width="397" height="338" alt="image" src="https://github.com/user-attachments/assets/42045a67-e457-4d0a-94e6-7ae3dcb5773e" />
+  <img width="398" height="500" alt="image" src="https://github.com/user-attachments/assets/e8120d8c-cdb6-4286-b1f9-1b14d450adec" />
+4. **Lack of Feedback Systems**  
+   - No built-in mechanism to confirm PCB insertion.  
+   - Incorrect placement could damage equipment.  
+   - Requires additional sensors for confirmation signals.  
 
+5. **Machine Software Dependency**  
+   - Testing cycle durations vary depending on pass/fail results.  
+   - Robot must either adopt longest cycle or integrate with test software for dynamic synchronisation.  
 
-4. **Lack of Feedback Systems**
-   - No built-in mechanism to confirm correct PCB insertion.  
-   - Incorrect placement could result in equipment damage.  
-   - Additional sensors must be integrated into machines to provide confirmation signals.  
-
-5. **Machine Software Dependency**
-   - Testing cycles vary in duration depending on pass/fail results.  
-   - Robot control must either adopt the longest cycle (limiting throughput) or establish communication with the test software for dynamic synchronisation.  
-
-6. **Sticker Printer Dependency**
-   - Sticker placement significantly complicates the gripper design due to size restrictions and removal method.  
-<img width="519" height="280" alt="image" src="https://github.com/user-attachments/assets/d9e5e85d-e8b7-48f0-bbff-ad40ebf8c8e3" />
-
+6. **Sticker Printer Dependency**  
+   - Sticker placement complicates gripper design due to size restrictions and removal method.
+    <img width="519" height="280" alt="image" src="https://github.com/user-attachments/assets/d9e5e85d-e8b7-48f0-bbff-ad40ebf8c8e3" />
 
 ---
 
 ## Outcomes
-- The robot arm’s operational functionality is limited by machine-specific requirements.  
-- Multi-machine operation is not feasible across different categories; at most, similar tray-based machines can be grouped.  
-- Sticker application is deprioritised to focus on critical tray handling and PCB placement tasks.  
-- Full autonomy is not possible with current limitations. Systems require **physical overhauls** and **digital connections** between testing machines and the robot arm.  
+
+- Initial expectations that a single robotic arm could fully automate PCB handling and testing have proven unrealistic. Variability between machines, reliance on human adaptability, and lack of integrated feedback limit automation potential.  
+- The robot’s functionality is constrained by machine-specific requirements. At best, only machines with similar tray systems can be grouped into a shared workflow.  
+- Full autonomy would require redesigned trays, fixtures, and test machine interfaces. Commercial PCB assembly lines (e.g. [Minitec Automated Lines](https://www.minitec.si/automated-line-for-pcb-assemblies)) show that true automation depends on multiple subsystems (conveyors, feeders, sensors, and multiple robots), not a single manipulator.  
+- With the current setup, multi-machine operation is not feasible. Sticker application and auxiliary tasks have been deprioritised in favour of safe tray handling and PCB placement.  
+- A robust solution requires both physical overhauls (custom trays, sensors, fixtures) and digital integration between robot and test machines. Without these, safe operation and throughput cannot be guaranteed.  
 
 ---
 
 ## Proposed Solutions
 
-- **Motion Control Strategy**  
-  Decide between:
-  1. A computer vision setup (higher flexibility, more development time and cost).  
-  2. A fixed positioning setup (simpler, but requires static calibrated fixtures and tables).  
-<img width="525" height="360" alt="image" src="https://github.com/user-attachments/assets/5b542562-06cc-443a-a880-81656d2ecc47" />
+### 1. Motion Control Strategy
+**Option A: Computer Vision Integration**  
+- Advantages: Flexible positioning, adapts across machines, can detect inverted/misaligned boards.  
+- Drawbacks: PCBs must be placed individually (not stacked), angled boards affect pickup/placement, high cost and development time.  
 
-
-- **System Expansion**  
-  1. Evaluate the use of a second robotic arm / automated assembly to manage auxiliary tasks such as stickers and PCB variants.
-  2. Replace Sticker for a Pass or Fail tray - Must connect Machine Computer to Tablet for RX/TX Comms
-
-- **Machine Adaptation**  
-  1. Incorporate sensors into trays/machines to confirm correct PCB insertion and tray position.  
-  2. Modify Machine 1 & 5 PCB holding casings and protrusions.  
+**Option B: Fixed Positioning with Calibrated Fixtures**  
+- Advantages: Simple, low cost, no extra hardware, reliable if fixtures stay static.  
+- Drawbacks: Sensitive to any shifts, requires standardised trays, low adaptability.  
 
 ---
 
-For any of theses actions to take place we do require more accesss to machines so that Setup can be finalised and we can conduct more testing in final setup. This is to identify any further complications that may arise. 
+### 2. Machine Adaptation
+- **Sensor Integration**  
+  - Advantages: Confirms PCB insertion and tray position, reduces risk of damage.  
+  - Drawbacks: Requires wiring changes, may cause downtime.  
+
+- **Hardware Modifications (Trays/Fixtures)**  
+  - Advantages: Removes clearance issues, makes trays easier for robots.  
+  - Drawbacks: Custom machining adds cost, may affect warranties.  
+
+---
+
+### 3. System Expansion
+- **Additional Robotic Arm / Automation**  
+  - Advantages: Splits workload (stickers vs. PCB handling), increases throughput and reliability.  
+  - Drawbacks: Expensive, needs more space and safety controls.  
+
+---
+
+### 4. Digital Integration
+- **Communication with Test Software**  
+  - Advantages: Syncs with actual test times, avoids waiting for longest cycle, improves efficiency.  
+  - Drawbacks: Depends on machine APIs or test software modifications, complexity varies.  
+
+---
+
+### 5. Phased Implementation
+- **Short Term**: Focus on tray handling and PCB placement.  
+  - Risk: Requires operator supervision, not fully autonomous.  
+- **Medium Term**: Add sensors and standardised trays.  
+  - Risk: Extra cost and downtime during adaptation.  
+- **Long Term**: Expand with vision systems and auxiliary automation.  
+  - Risk: High investment, may still not match full PCB assembly line flexibility.  
+
+---
+
+## Resource Requirements
+- **Testing Access**: Overnight access needed, daytime availability is limited by production schedules.  
+- **Hardware Modifications**: Trays, tables, and machines will require redesign and integration of sensors.  
+
+---
