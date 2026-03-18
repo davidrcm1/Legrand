@@ -1,6 +1,7 @@
 
 ![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/b314935a-708a-4745-8a0d-cc8f9a267198)
 
+![ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/47f00add-5d25-4169-848b-7f75ca7c57d4)
 
 Dependancies 
 
