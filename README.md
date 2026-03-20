@@ -3,7 +3,8 @@
 
 ![ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/47f00add-5d25-4169-848b-7f75ca7c57d4)
 
-<img width="876" height="929" alt="Screenshot from 2026-03-21 10-42-45" src="https://github.com/user-attachments/assets/d8dd88af-02c8-4e85-992b-d19d93240cba" />
+<img width="876" height="929" alt="Screenshot from 2026-03-21 10-43-52" src="https://github.com/user-attachments/assets/acaee83c-1137-4506-bf53-7fe8415fe9ed" />
+
 
 
 <img width="605" height="597" alt="image" src="https://github.com/user-attachments/assets/9331d728-75bd-4d1b-97d3-334a988ce33a" />
