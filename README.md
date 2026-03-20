@@ -5,6 +5,11 @@
 
 <img width="876" height="929" alt="Screenshot from 2026-03-21 10-43-52" src="https://github.com/user-attachments/assets/acaee83c-1137-4506-bf53-7fe8415fe9ed" />
 
+<img width="569" height="660" alt="image" src="https://github.com/user-attachments/assets/6f4b7fdc-f010-4261-8297-5cbcc678080b" />
+
+<img width="1059" height="559" alt="image" src="https://github.com/user-attachments/assets/6e921961-0f1e-43ce-a921-50f5a2c06127" />
+
+<img width="817" height="534" alt="image" src="https://github.com/user-attachments/assets/87e8e526-d43f-4f46-8088-7491818d277e" />
 
 
 <img width="605" height="597" alt="image" src="https://github.com/user-attachments/assets/9331d728-75bd-4d1b-97d3-334a988ce33a" />
